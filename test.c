@@ -476,3 +476,117 @@
 //	}
 //	return 0;
 //}
+
+////switch语句 用于多分支的语句
+//
+////switch(整型表达式)
+////{
+////	case 常量1:语句1;break;
+////	case 常量2:语句2;break;
+////	case 常量3:语句3;break;
+////	case 常量4:语句4;break;
+////	...
+////	default :语句;break;
+////}
+//int main()
+//{
+//	int day = 0;
+//	scanf_s("%d", &day);
+//	switch (day)//括号里必须是个整型
+//	{
+//	case 1://case后面必须为常量表达式  
+//		printf("星期一"); break;//break用于跳出switch
+//	case 2:
+//		printf("星期二"); break;
+//	case 3:
+//		printf("星期三"); break;
+//	case 4:
+//		printf("星期四"); break;
+//	case 5:
+//		printf("星期五"); break;
+//	case 6:
+//		printf("星期六"); break;
+//	case 7:
+//		printf("星期七"); break;
+//	default:
+//		printf("傻逼"); break;
+//	}
+//	return 0;
+//}
+
+//int main()
+//{
+//	int day = 0;
+//	scanf_s("%d", &day);
+//	switch (day)
+//	{
+//	case 1:  
+//	case 2:
+//	case 3:
+//	case 4:
+//	case 5:
+//		printf("工作日"); break;
+//	case 6:
+//	case 7:
+//		printf("休息日"); break;
+//	default:
+//		printf("傻逼"); break;
+//	}
+//	return 0;
+//}
+
+////示例
+//int main()
+//{
+//	int n = 1;
+//	int m = 2;
+//	switch (n)
+//	{
+//	case 1:m++;
+//	case 2:n++;
+//	case 3:
+//		switch (n)
+//		{
+//		case 1:n++;
+//		case 2:m++; n++; break;//这个break跳出的是这个switch的分支
+//		}
+//	case 4:m++; break;
+//	default:break;
+//	}
+//	printf("m=%d,n=%d", m, n);//结果是5,3
+//	return 0;
+//}
+
+//循环语句while
+// 
+//while(表达式)
+//	循环语句；
+//
+//在屏幕上打印1-10的数字
+//int main()
+//{
+//	int i = 0;
+//	while (i<=10)
+//	{
+//		i++;
+//		printf("%d ", i);
+//		if(i==5)
+//		break;//直接跳出while循环
+//	}
+//	return 0;
+//}
+
+//int main()
+//{
+//	int i = 1;
+//	while (i <= 10)
+//	{	
+//		if (i == 5)
+//			continue;//本次循环continue后面的不执行了 直接回到while
+//		printf("%d ", i);
+//		i++;//把这放在if前试试 
+//	}
+//	return 0;
+//}
+
+//代码1
