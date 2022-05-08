@@ -590,3 +590,53 @@
 //}
 
 //代码1
+//int main()
+//{
+//	int ch = 0;
+//	while ((ch=getchar()) != EOF)//getchar 接受键盘输入的字符 ctrl+z就会获得一个EOF ——end of file
+//	{
+//		putchar(ch);//打印字符 与printf差不多
+//	}
+//	return 0;
+//}
+
+//代码2
+//int main()
+//{
+//	char ret = 0;
+//	int clear = 0;
+//	char password[20] = {0};
+//	printf("请输入密码：");
+//	scanf_s("%s", &password, 20);//输入的密码12345\n（回车） 
+//	//只有回车前和空格前的会放在password中--12334   abcf   \n保留
+//	while ((clear = getchar()) != '\n')
+//	{
+//		;//把\n之前的所有输入读取走 清空缓冲区
+//	}
+//	printf("请确认（Y/N）");
+//	ret = getchar();
+//	if (ret=='Y')
+//	{
+//		printf("确认成功");
+//	}
+//	else
+//	{
+//		printf("放弃确认");
+//	}
+//	return 0;
+//}
+
+//代码2
+//int main()
+//{
+//	int ch;
+//	while ((ch=getchar())!=EOF)
+//	{
+//		if (ch < '0' || ch>'9')//数字都会打印 其他都不打印
+//		{
+//			continue;
+//		}
+//		putchar(ch);
+//	}
+//	return 0;
+//}
