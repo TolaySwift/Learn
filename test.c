@@ -578,13 +578,13 @@
 
 //int main()
 //{
-//	int i = 1;
-//	while (i <= 10)
+//	int i = 1; //初始化
+//	while (i <= 10) //判断
 //	{	
 //		if (i == 5)
 //			continue;//本次循环continue后面的不执行了 直接回到while
 //		printf("%d ", i);
-//		i++;//把这放在if前试试 
+//		i++;//把这放在if前试试   //调整
 //	}
 //	return 0;
 //}
@@ -629,14 +629,140 @@
 //代码2
 //int main()
 //{
-//	int ch;
-//	while ((ch=getchar())!=EOF)
+//	int ch; //初始化
+//	while ((ch=getchar())!=EOF) //判断
 //	{
 //		if (ch < '0' || ch>'9')//数字都会打印 其他都不打印
 //		{
 //			continue;
 //		}
 //		putchar(ch);
+//	}
+//	return 0;
+//}
+
+
+//for 循环 不可在for循环内修改循环变量 for循环语句的循环控制变量的取值采用“前闭后开”的写法
+//for(表达式1；表达式2；表达式3) 表达式1：初始化循环变量 表达式2：条件判断 表达式3：循环条件调整部分
+//	循环语句；
+
+//int main()
+//{
+//	//          初始化  判断    调整
+//	for (size_t i = 1; i < 11; i++)
+//	{
+//		if (i == 5)
+//			continue;//这和while循环有不同 continue后的不执行 但是判断调整i++在for里面时会继续执行
+//						//这里输出结果就是 1 2 3 4 6 7 8 9 10  break也是跳出循环
+//		printf("%d ", i);//结果为1 2 3 4 5 6 7 8 9 10
+//	}
+//	return 0;
+//}
+
+//int main()
+//{
+//	for (size_t i = 0; i < 10; i++)//size_t在32位架构上是4字节，在64位架构上是8字节，
+//		//在不同架构上进行编译时需要注意这个问题。
+//		//而int在不同架构下都是4字节，与size_t不同；且int为带符号数，size_t为无符号数。
+//	{
+//		if (i = 5)//这里每次循环都对循环变量i赋值5 导致进入死循环
+//			printf("hahaha\n");
+//		printf("wowowow\n");
+//	}
+//	return 0;
+//}
+
+
+////for循环的变种
+//int main()
+//{
+//	int i = 0;
+//	int j = 0;
+//	for (/*i=0*/; i<10 ;i++)//for循环的初始化 判断 调整都省略 只要判断省略 那判断横为真 全部去掉就是个死循环
+//	{
+//		for(/*j=0*/;j<10;j++)//这里随意省略初始化 会有问题 有初始化答应的是0到9各打印10次 没有初始化只打印0十次
+//		printf("%d %d\n",i,j);
+//	}
+//	return 0;
+//}
+
+//int main()
+//{
+//	for (size_t a = 0, b=0; a < 4 && b<5; ++a, b++)//a++先参加程序的运行再+1，
+//													//而++a则是先+1再参加程序的运行 但在这结果一样哦！！！
+//	{
+//		printf("%d %d\n", a, b);
+//	}
+//	return 0;
+//}
+
+//一个笔试题
+//int main()
+//{
+//	int i = 0;
+//	int k = 0;
+//	for (i = 0, k = 0; k = 0; i++,k++)//k=0这个“判断语句”的结果就是0 
+//	{
+//		k++;
+//		printf("%d\n", k);
+//	}
+//	return 0;
+//}
+
+//int main()
+//{
+//	int i = 1;
+//	int k = 1;
+//	for (i = 1, k = 1; k = 1; i++, k++)//k=1这个“判断语句”的结果就是1 
+//	{
+//		k++;
+//		printf("%d\n", k);
+//	}
+//	return 0;
+//}
+
+
+
+//do while 循环  
+
+//do
+//	循环语句；
+//while(表达式)；
+
+int main()
+{
+	int i = 1;
+	do
+	{
+		//if (i == 5)
+		//	continue;//他的continue和break与while一样
+		printf("%d\n", i);//do while 循环由于其循环体 循环参数调整 循环条件判定位置特殊 一定要注意
+		i++;
+	} 
+	while (i<=10);
+	return 0;
+}
+
+
+// 群里讨论的代码
+//int main()
+//{
+//	int a, b;
+//	printf("请输入两个值：");
+//	scanf_s("%d,%d", &a, &b);
+//	//int* c = &b;
+//	//printf("%p\n", c);
+//	if (a > b)
+//	{
+//		printf("%d>%d", a, b);
+//	}
+//	else if (a < b)
+//	{
+//		printf("%d<%d", a, b);
+//	}
+//	else 
+//	{
+//		printf("%d=%d", a, b);
 //	}
 //	return 0;
 //}
