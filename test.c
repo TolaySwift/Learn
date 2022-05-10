@@ -725,23 +725,118 @@
 
 //do while 循环  
 
-//do
-//	循环语句；
-//while(表达式)；
+////do
+////	循环语句；
+////while(表达式)；
+//
+//int main()
+//{
+//	int i = 1;
+//	do
+//	{
+//		//if (i == 5)
+//		//	continue;//他的continue和break与while一样
+//		printf("%d\n", i);//do while 循环由于其循环体 循环参数调整 循环条件判定位置特殊 一定要注意
+//		i++;
+//	} 
+//	while (i<=10);
+//	return 0;
+//}
 
-int main()
-{
-	int i = 1;
-	do
-	{
-		//if (i == 5)
-		//	continue;//他的continue和break与while一样
-		printf("%d\n", i);//do while 循环由于其循环体 循环参数调整 循环条件判定位置特殊 一定要注意
-		i++;
-	} 
-	while (i<=10);
-	return 0;
-}
+
+//练习1 n的阶乘
+//int main()//n*(n-1)*(n-2)  1*2*3*...n
+//{
+//	int n;
+//	int a = 1;
+//	printf("请输入一个大于零的正整数：");
+//	scanf_s("%d", &n);
+//	for ( int i = 1; i <= n; i++)
+//	{
+//		a = a * i;
+//		if(i==n)
+//			printf("这个数的的阶乘为：%d",a);
+//	}
+//	return 0;
+//}
+
+// 计算1！+2！....10!+n!
+//int main()
+//{
+//	int ret = 1;
+//	int a = 1;
+//	int b = 0;
+//	int n;
+//	int i = 1;
+//	printf("请输入一个大于零的正整数：");
+//	scanf_s("%d", &n);
+//	for ( a = 1; a <= n; a++)
+//	{
+//		for (; i <= a; i++)
+//		{
+//			ret = ret * i;
+//		}
+//		b = b + ret;
+//	}
+//	printf("%d", b);
+//	return 0;
+//}
+//
+//这两个程序功能一样但是计算方法不一样
+//
+//int main()
+//{
+//	int a = 1;
+//	int b = 0;
+//	int n;
+//	int i = 1;
+//	printf("请输入一个大于零的正整数：");
+//	scanf_s("%d", &n);
+//	for (a = 1; a <= n; a++)
+//	{
+//		int ret = 1;//不初始化 ret会一直保留上一个数的阶乘 
+//		for (i=1 ; i <= a; i++)
+//		{
+//			ret = ret * i;
+//		}
+//		b = b + ret;
+//	}
+//	printf("%d", b);
+//	return 0;
+//}
+
+//下面这个思路和第一个程序思路一样 但是时间复杂度低
+//int main()
+//{
+//	int a = 1;
+//	int b = 0;
+//	int n;
+//	int ret = 1;
+//	printf("请输入一个大于零的正整数：");
+//	scanf_s("%d", &n);
+//	for (a = 1; a <= n; a++)
+//	{
+//		ret = ret * a;
+//		b = b + ret;
+//	}
+//	printf("%d", b);
+//	return 0;
+//}
+
+//在一个有序数组中查找具体的某个数字。编写int binsearch(int x,intv[],int n);
+//功能：在v[0]<=v[1]<=v[2]<=....v[n-1]<=v[n]
+
+
+
+
+
+//int main()
+//{
+//	int weight = 170;
+//	for (weight = 170; weight >= 145; weight--)
+//		printf("骑车\n");
+//	return 0;
+//}
 
 
 // 群里讨论的代码
