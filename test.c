@@ -826,6 +826,104 @@
 //在一个有序数组中查找具体的某个数字。编写int binsearch(int x,intv[],int n);
 //功能：在v[0]<=v[1]<=v[2]<=....v[n-1]<=v[n]
 
+//时间复杂度为n
+//int main()
+//{
+//	int v[] = { 1,2,3,4,5,6,7,8,9,10 };
+//	int k = 17;
+//	int sz = sizeof(v) / sizeof(v[1]);
+//	for ( int i = 0; i <= sz; i++)
+//	{
+//		if (k == v[i])
+//			printf("找到了，下标是：%d\n", i);
+//		if (i==sz)
+//			printf("找不到了");
+//	}
+//	return 0;
+//}
+
+//二分法查找 时间复杂度为log 2为底N
+//int main()
+//{
+//	int v[] = { 1,2,3,4,5,6,7,8,9 };
+//	int k = 17;
+//	int left = 0;//左下标
+//	int sz = sizeof(v) / sizeof(v[1]);//计算元素个数
+//	int right = sz - 1;//右下标
+//	while (left<=right)
+//	{
+//
+//		int mid = (left + right) / 2;
+//		if (v[mid] > k)
+//			right = mid - 1;
+//		else if (v[mid] < k)
+//			left = mid + 1;
+//		else
+//		{
+//			printf("找到了，下标是：%d", mid);
+//			break;
+//		}
+//	}
+//	if (left > right)
+//	{
+//		printf("找不到哦！");
+//	}
+//	return 0;
+//}
+
+//int main()
+//{
+//	int arr[] = { 1,2,3,4,5,6,7,8,9,10 };
+//	int k = 19;
+//	int sz = sizeof(arr) / sizeof(arr[0]);
+//	int right = sz - 1;
+//	int left = 0;
+//	while(left<=right)
+//	{
+//		int mid = (right + left) / 2;
+//		if (k < arr[mid])
+//			right = mid - 1;
+//		else if (k > arr[mid])
+//			left = mid + 1;
+//		else
+//		{
+//			printf("下标是：%d", mid);
+//			break; 
+//		}
+//	
+//	}
+//	if (left > right)
+//	{
+//		printf("找不到");
+//	}
+//	return 0;
+//}
+
+int main()
+{
+	char arr1[] = "welcome to bit";
+	char arr2[] = "##############";
+	int sz1 = sizeof(arr1) / sizeof(arr1[0]);
+	int sz2 = sizeof(arr2) / sizeof(arr2[0]);
+	int left1 = 0;
+	int right1 = sz1; 
+	int left2 = 0; 
+	int right2 = sz2;
+	for (int i = 0; i <= sz1; i++)
+	{
+		arr2[left2] = arr1[left1];
+		arr2[right2] = arr1[right1];
+		printf("%s\n", arr2);
+		left1++;
+		right1--;
+		left2++;
+		right1--;
+	}
+	return 0;
+}
+
+
+
 
 
 
