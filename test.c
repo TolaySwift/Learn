@@ -1,5 +1,7 @@
 #include <stdio.h>//std=标准 i=input o=output
 #include <string.h>
+#include <windows.h>
+#include <stdlib.h>
 //int num1 = 20;//全局变量 作用域为整个工程
 //#define MAX 10 //#define定义的标识符常量
 //int main()//主函数-程序入口（有且只有一个）int表示main函数调用之后返回一个整型值
@@ -871,6 +873,8 @@
 //	return 0;
 //}
 
+
+//编写代码，演示多个字符从两端移动，向中间汇聚
 //int main()
 //{
 //	int arr[] = { 1,2,3,4,5,6,7,8,9,10 };
@@ -899,30 +903,109 @@
 //	return 0;
 //}
 
-int main()
-{
-	char arr1[] = "welcome to bit";
-	char arr2[] = "##############";
-	int sz1 = sizeof(arr1) / sizeof(arr1[0]);
-	int sz2 = sizeof(arr2) / sizeof(arr2[0]);
-	int left1 = 0;
-	int right1 = sz1; 
-	int left2 = 0; 
-	int right2 = sz2;
-	for (int i = 0; i <= sz1; i++)
-	{
-		arr2[left2] = arr1[left1];
-		arr2[right2] = arr1[right1];
-		printf("%s\n", arr2);
-		left1++;
-		right1--;
-		left2++;
-		right1--;
-	}
-	return 0;
-}
+//int main()
+//{
+//	char arr1[] = "welcome to bit";
+//	char arr2[] = "##############";
+//	int sz1 = sizeof(arr1) / sizeof(arr1[0]);
+//	int sz2 = sizeof(arr2) / sizeof(arr2[0]);
+//	int left1 = 0;
+//	int right1 = sz1-2; 
+//	int left2 = 0; 
+//	int right2 = sz2-2;
+//	printf("%s\n", arr2);
+//	for (int i = 0; i <= (sz1/2-1); i++)
+//	{
+//		arr2[left2] = arr1[left1];
+//		arr2[right2] = arr1[right1];
+//		printf("%s\n", arr2);
+//		left1++;
+//		right1--;
+//		left2++;
+//		right2--;
+//	}
+//	return 0;
+//}
+
+//int main()
+//{
+//	char arr1[] = "welcome to bit";//[wwlcome to bit\n]
+//	char arr2[] = "##############";
+//	int sz1 = sizeof(arr1) / sizeof(arr1[0]);
+//	int sz2 = sizeof(arr2) / sizeof(arr2[0]);
+//	int left1 = 0;
+//	//int left1=strlen(arr1)-1
+//	int right1 = sz1 - 2;//为什么要－2 sz计算的是字符个数加上\0 而每个字符下标是个数减一
+//	int left2 = 0;
+//	int right2 = sz2 - 2;
+//	/*printf("%s\n", arr2);*/
+//	while (left2<=right2&& left1 <= right1)
+//	{
+//		arr2[left2] = arr1[left1];
+//		arr2[right2] = arr1[right1];
+//		printf("%s\n", arr2);
+//		Sleep(1000);
+//		system("cls");//执行系统命令的一个函数-cls-清空屏幕
+//		left1++;
+//		right1--;
+//		left2++;
+//		right2--;
+//	}
+//	return 0;
+//}
 
 
+//编写代码实现，模拟用户登录情景，并且只能登录三次。（只允许输入三次密码，
+//如果密码正确则提示登录完成，如果三次错误则退出程序
+//int main()
+//{
+//	char ret[20] = "";
+//	int i;
+//	printf("请输入密码：");
+//	scanf_s("%s", ret, 20);
+//	for (i = 1; i <= 2; i++)
+//	{
+//		char secret[] = "big_heat";
+//		if (strcmp(secret,ret)== 0 )//==不能比较两个字符串是否相等 要用库函数strcmp 相等返回0
+//		{
+//			printf("登录成功");
+//			break;
+//		}
+//		else
+//		{
+//			printf("请输入密码(还有%d次机会)：",3-i);
+//			scanf_s("%s", ret, 20);
+//		}
+//
+//	}
+//	if(i==3)
+//		printf("密码忘记咯");
+//	return 0;
+//}
+
+//int main()
+//{
+//	char ret[9] = {0};
+//	int i;
+//	printf("请输入密码：");
+//	scanf_s("%s", ret, 9);
+//	for (i = 0; i <= 2; i++)
+//	{
+//		if ( strcmp(ret,"1234")==0)
+//		{
+//			printf("登录成功");
+//			break;
+//		}
+//		else
+//		{
+//			printf("请输入密码(还有%d次机会)：", 2 - i);
+//			scanf_s("%s", ret, 9);
+//		}
+//	}
+//	if(i==2)
+//		printf("密码忘记咯");
+//	return 0;
+//}
 
 
 
