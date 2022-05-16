@@ -18,10 +18,10 @@
     <ClCompile Include="test.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="源.c">
+    <ClCompile Include="Add.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Add.c">
+    <ClCompile Include="作业.c">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
