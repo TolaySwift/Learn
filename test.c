@@ -1046,3 +1046,59 @@
 //	return 0;
 //}
 
+//goto 语句 
+//c语言提供了随意滥用的的沟通语句和标记跳转的地方
+//最好不要用
+
+//int main()
+//{
+//again:
+//	printf("hello");
+//	goto again;
+//	return 0;
+//}
+
+//int main()
+//{
+//	printf("你好");
+//	goto again;
+//again:
+//	printf("hello");
+//	return 0;
+//}
+
+//int main()
+//{
+//	char input[20] = {0};
+//	system("shutdown -s -t 60");
+//again:
+//	printf("电脑将会在60s后关机，输入“我爱你”取消！！！\n请输入：");
+//	scanf_s("%s", input, 20);
+//	if (strcmp(input, "我爱你") == 0)
+//	{
+//		system("shutdown -a");
+//		printf("关机取消");
+//	}
+//	else
+//		goto again;
+//	return 0;
+//}
+
+////用循环来写
+//int main()
+//{
+//	char input[20] = { 0 };
+//	system("shutdown -s -t 60");
+//	while (1)
+//	{
+//		printf("电脑将会在60s后关机，输入“我爱你”取消！！！\n请输入：");
+//		scanf_s("%s", input, 20);
+//		if (strcmp(input, "我爱你") == 0)
+//		{
+//			system("shutdown -a");
+//			printf("关机取消");
+//			break;
+//		}
+//	}
+//	return 0;
+//}
